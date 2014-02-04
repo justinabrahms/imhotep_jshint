@@ -16,7 +16,7 @@ class JSHint(Tool):
     def get_file_extensions(self):
         return ['.js']
 
-    def get_command(self, dirname):
+    def get_command(self, dirname, **kwargs):
         cmd = "jshint "
         config_path = os.path.join(dirname, self.jshintrc_filename)
         if os.path.exists(config_path):
